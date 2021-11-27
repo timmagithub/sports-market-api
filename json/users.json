@@ -1,0 +1,13 @@
+[
+    {
+        "name": "user",
+  "username": "username",
+  "password": "password",
+  "email": "email@email.com",
+  "birthday": "2021-11-27",
+  "funds": 25000,
+  "portfolio": [],
+  "tagline": "Round 1",
+  "watchList": []
+    }
+]

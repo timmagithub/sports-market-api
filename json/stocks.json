@@ -1,0 +1,12 @@
+[
+  {
+  "name": "Tom Brady",
+  "image": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/n7fj5fjblf6pdgjdtphr.jpg",
+  "position": "Quarterback",
+  "team":  "Tampa Bay Buccaneers",
+  "projectOutput": 422.43,
+  "currentOutput": 209,
+  "currentPrice": 430,
+  "pastPrices": [430, 429.97, 429.96, 429.90, 429.93, 429.89, 429.86]
+}
+]
