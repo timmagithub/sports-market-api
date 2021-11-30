@@ -33,16 +33,6 @@ app.get("/stocks", (req, res) => {
     });
 });
 
-// register a new user
-app.post("/users", [
-  check("name", "Name is required").not().isEmpty(),
-  check(
-    "username",
-    "Username must be at least 5 alphanumeric characters"
-  ).matches(/^[a-zA-Z0-9]{5}$/, "i"),
-  check("password", "Must be"),
-]);
-
 app.use(express.static("public"));
 
 app.use((err, req, res, next) => {
