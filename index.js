@@ -9,14 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const { check, validationResult } = require("express-validator");
 
-mongoose.connect(
-  (process.env.CONNECTION_URI,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  })
-);
+mongoose.connect(process.env.CONNECTION_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+});
 
 app.use(morgan("common"));
 
@@ -45,6 +42,13 @@ app.post("/users", [
   ).matches(/^[a-zA-Z0-9]{5}$/, "i"),
   check("password", "Must be"),
 ]);
+
+app.use(express.static("public"));
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
 
 const port = process.env.PORT || 8080;
 app.listen(port, "0.0.0.0", () => {
