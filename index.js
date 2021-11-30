@@ -9,11 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const { check, validationResult } = require("express-validator");
 
-mongoose.connect(process.env.CONNECTION_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+mongoose.connect(process.env.CONNECTION_URI, {});
 
 app.use(morgan("common"));
 
