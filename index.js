@@ -48,7 +48,7 @@ app.post("/users", [
 
 const port = process.env.PORT || 8080;
 app.listen(port, "0.0.0.0", () => {
-  console.log("it is alive on port " + port);
+  console.log("It is alive on " + port + "!");
 });
 
 // app.listen(8080, () => {
