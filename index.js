@@ -10,7 +10,7 @@ app.use(express.json());
 const { check, validationResult } = require("express-validator");
 
 mongoose.connect(
-  (process.nextTick.CONNECTION_URI,
+  (process.env.CONNECTION_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
